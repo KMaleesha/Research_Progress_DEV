@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../utils/config.dart';
 import 'letterErrorDetection.dart';
+import '../Model/PositionalValuesModel.dart';
 
 class PositionalErrorDetector extends StatefulWidget {
   const PositionalErrorDetector({Key? key}) : super(key: key);

@@ -12,6 +12,20 @@ class _MarkCalculation extends State<MarkCalculation> {
 
   @override
   Widget build(BuildContext context) {
+
+    double calculateMark(String word, int correctCount, int wrongCount) {
+      int wordLength = word.length;
+      double correctPercentage = (correctCount / wordLength) * 100;
+      double mark = correctPercentage - (wrongCount * 10);
+
+      // Ensure mark is not negative
+      if (mark < 0) {
+        mark = 0;
+      }
+
+      return mark;
+    }
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
