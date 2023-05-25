@@ -3,20 +3,16 @@ class PositionalValueModel{
   String? initialValue;
   String? middleValue;
   String? endValue;
-  String? letter;
-  String? number;
-  String? letterCategory;
-  String? categoryFeedback;
+  String? letters;
+  int? letterCount;
 
   PositionalValueModel({
     this.word = "KATHA",
     this.initialValue = "KA",
     this.middleValue = "THA",
     this.endValue = "",
-    this.letter,
-    this.number,
-    this.letterCategory,
-    this.categoryFeedback,
+    this.letters,
+    this.letterCount,
 });
 
   factory PositionalValueModel.formMap(map){
@@ -25,10 +21,8 @@ class PositionalValueModel{
         initialValue:map['initialValue'],
         middleValue:map['middleValue'],
         endValue:map['endValue'],
-        letter:map['letter'],
-        number:map['number'],
-        letterCategory:map['letterCategory'],
-        categoryFeedback:map['categoryFeedback'],
+        letters: map['letters'],
+        letterCount:map['letterCount'],
     );
   }
 
@@ -38,10 +32,8 @@ class PositionalValueModel{
       'initialValue':initialValue,
       'middleValue':middleValue,
       'endValue':endValue,
-      'letter':letter,
-      'number':number,
-      'letterCategory':letterCategory,
-      'categoryFeedback':categoryFeedback,
+      'letters': letters,
+      'letterCount':letterCount,
     };
   }
 }
